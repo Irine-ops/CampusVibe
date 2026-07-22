@@ -1,0 +1,6 @@
+{
+  "name": "AI Campus Marketplace",
+  "description": "A single-page AI Campus Marketplace for college students to buy and sell used textbooks, cycles, electronics, and dorm gear.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,30 @@
+{
+  "entities": {
+    "Listing": {
+      "title": "Listing",
+      "description": "Campus marketplace listing item",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string", "maxLength": 150 },
+        "category": { "type": "string", "enum": ["Books", "Cycles", "Electronics", "Other"] },
+        "price": { "type": "number" },
+        "condition": { "type": "string", "enum": ["Like New", "Good", "Fair"] },
+        "description": { "type": "string", "maxLength": 1000 },
+        "imageBase64": { "type": "string" },
+        "imageUrl": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "sellerId": { "type": "string" },
+        "sellerName": { "type": "string" },
+        "pickupLocation": { "type": "string" },
+        "contactNumber": { "type": "string" }
+      },
+      "required": ["name", "category", "price", "condition", "description"]
+    }
+  },
+  "firestore": {
+    "/listings/{listingId}": {
+      "schema": "Listing",
+      "description": "Public campus marketplace listings"
+    }
+  }
+}
